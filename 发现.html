@@ -4,34 +4,41 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>黑羊羊 - 发现</title>
+<link rel="shortcut icon" href="logo.png" type="image/x-icon">
 <style>
   /* 基本的CSS样式 */
   body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
+    background: url('花纹背景.png') no-repeat center center fixed; 
+    background-size: cover; /* 背景图片覆盖整个页面 */
+    color: #555; /* 主体文字颜色 */
   }
   footer {
-      background-color: #333;
-      color: white;
-      padding: 10px 0;
-      text-align: center;
-    }
-  header {
-    background-color: #333;
+    background-color: #ff7b00;
     color: white;
     padding: 10px 0;
+    text-align: center;
+    position: fixed; /* 固定位置 */
+    bottom: 0; /* 定位到底部 */
+    width: 100%; /* 宽度与视口宽度一致 */
+  }
+  header {
+    background-color: #ff9800; /* 活泼的橙色背景 */
+    color: white;
+    padding: 20px 0;
   }
   .header-content {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   .logo-title {
     display: flex;
     align-items: center;
-    width: 100%;
-    justify-content: center;
   }
   .logo-title img {
     margin-right: 10px;
@@ -39,37 +46,44 @@
   nav ul {
     list-style-type: none;
     padding: 0;
-    margin-top: 10px; /* 为导航栏和标题之间添加一些空间 */
+    display: flex;
+    margin: 0;
   }
   nav ul li {
-    display: inline;
     margin-right: 20px;
   }
   nav a {
     text-decoration: none;
     color: white;
+    transition: color 0.3s ease;
+  }
+  nav a:hover, nav a:focus {
+    color: #333; /* 悬停和聚焦时的颜色变化 */
+    text-decoration: underline; /* 添加下划线 */
   }
   #search-form {
-    text-align: center;
-    margin-top: 20px;
+    text-align: right;
   }
   #site-search {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 2px solid #ff9800;
     border-radius: 5px;
     width: 300px;
   }
   #search-button {
-    background-color: #0074D9;
+    background-color: #ff9800;
     color: white;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  #search-button:hover {
+    background-color: #e65100; /* 按钮悬停时的颜色变化 */
   }
 </style>
 </head>
-<link rel="shortcut icon" href="logo.png" type="image/x-icon">
 <body>
   <header>
     <div class="header-content">
@@ -88,19 +102,19 @@
           <li><a href="我的空间.html">我的空间</a></li>
         </ul>
       </nav>
+      <form id="search-form">
+        <input type="search" id="site-search" name="q" aria-label="搜索栏" placeholder="请输入关键词">
+        <button id="search-button">搜索</button>
+      </form>
+    </div>
+  </header>
 
-  <form id="search-form">
-    <input type="search" id="site-search" name="q" aria-label="搜索栏" placeholder="请输入关键词">
-    <button id="search-button">搜索</button>
-  </form>
-</header>
+  <main>
+    <!-- 主要内容 -->
+  </main>
 
-<main>
-
-</main>
-
-<footer>
-  <p>版权所有 &copy; 2024 黑羊羊</p>
-</footer>
+  <footer>
+    <p>版权所有 © 2024 黑羊羊——从“屠夫”刀下拯救被欺凌者</p>
+  </footer>
 </body>
 </html>

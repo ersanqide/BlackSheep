@@ -25,39 +25,24 @@
     width: 100%; /* 宽度与视口宽度一致 */
   }
   header {
-      background-color: #ff9800; /* 活泼的橙色背景 */
-      color: white;
-      padding: 20px 0;
-      text-align: center; /* 标题居中 */
-    }
-    .header-top {
-
-    margin-bottom: 20px; /* 增加标题和导航栏之间的距离 */
+    background-color: #ff9800; /* 活泼的橙色背景 */
+    color: white;
+    padding: 20px 0;
+    text-align: center; /* 标题居中 */
   }
-  .header-content {
+  .header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    margin-bottom: 20px; /* 增加标题和导航栏之间的距离 */
   }
-  
-  .logo-title {
-      display: inline-block; /* 行内块级元素 */
-      align-items: center;
-      margin: 0 auto; /* 水平居中 */
-    }
-
-    .logo-title img {
-      vertical-align: middle; /* 与文本垂直居中 */
-      margin-right: 10px;
-    }
-
-    h1 {
-      display: inline; /* 行内元素 */
-      margin: 20px; /* 移除默认外边距 */
-    }
-    .logo-title img, h1, #site-search, #search-button {
+  .logo-title, #search-form {
+    display: inline-flex;
+    align-items: center;
+  }
+  .logo-title img, h1, #site-search, #search-button {
     margin: 0 10px;
   }
   nav ul {
@@ -79,118 +64,60 @@
     color: #333;
     text-decoration: underline;
   }
-  #search-form {
-      display: inline-block; /* 行内块级元素 */
-      vertical-align: middle; /* 与文本垂直居中 */
-    }
-
-    #site-search {
-      padding: 10px;
-      border: 2px solid #ff9800;
-      border-radius: 5px;
-      width: 200px;
-    }
-
-    #search-button {
-      background-color: #ff9800;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    #search-button:hover {
-      background-color: #e65100; /* 按钮悬停时的颜色变化 */
-    }
-  
-
-  /*主页模块*/
   main {
-      max-width: 2000px; /* 最大宽度限制 */
-      margin: 0 auto; /* 水平居中显示 */
-      padding: 20px; /* 内边距 */
-    }
-
-    /* 模块样式 */
-    section {
-      margin-bottom: 20px; /* 模块之间的间距 */
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
-      text-align: center; /* 文本居中 */
-    }
-
-    /* 卡片样式 */
-    .tweet-card, .case-card, .recent-case-card {
-      background-color: #FFFBE6; /* 淡黄色背景 */
-      padding: 15px;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px; /* 卡片之间的间距 */
-      display: inline-block; /* 行内块级元素 */
-      width: calc(100% - 30px); /* 宽度为容器宽度减去内边距 */
-      box-sizing: border-box; /* 边框和内边距的宽度包含在width内 */
-    }
-
-    .tweet-card:hover, .case-card:hover, .recent-case-card:hover {
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 悬停时增加阴影 */
-    }
-
-    /* 容器样式 */
-     .cases-container, .recent-cases-container {
-      display: flex;
-      flex-direction: column; /* 子元素垂直排列 */
-      align-items: center; /* 子元素水平居中 */
-    }
-    .tweets-container {
-      display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
-  padding: 20px;
-      align-items: center; /* 子元素水平居中 */
-    }
-
-    /* 新增行容器样式 */
-    .gallery {
-      display: flex;
-      flex-direction: column; /* 子元素垂直排列 */
-      align-items: center; /* 子元素水平居中 */
-    }
-
-    .XX {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
-  padding: 20px;
-}
-      /*主页模块*/
-
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  .tweet-card, .case-card, .recent-case-card {
+    background-color: #FFFBE6;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: block;
+    width: calc(100% - 30px);
+    box-sizing: border-box;
+  }
+  .tweet-card:hover, .case-card:hover, .recent-case-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .cases-container, .recent-cases-container, .tweets-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 </style>
 </head>
 <body>
   <header>
     <div class="header-top">
       <div class="logo-title">
-        <img src="logo.png" alt="Logo" height="50"> <!-- 调整logo的路径和尺寸 -->
-        <h1 style="font-family: '楷体', sans-serif;">黑羊羊</h1>
+        <img src="logo.png" alt="Logo" height="50">
+        <h1>黑羊羊</h1>
       </div>
       <form id="search-form">
         <input type="search" id="site-search" name="q" aria-label="搜索栏" placeholder="请输入关键词">
-        <button id="search-button" style="border: 2px solid white;">搜索</button>
+        <button id="search-button">搜索</button>
       </form>
     </div>
     <nav>
       <ul>
-        <li style="font-family: '方正小标宋简体', sans-serif;"><a href="index.html">首页</a></li>
-        <li style="font-family: '方正小标宋简体', sans-serif;"><a href="干预模式.html">干预模式</a></li>
-        <li style="font-family: '方正小标宋简体', sans-serif;"><a href="如何预防.html">如何预防</a></li>
-        <li style="font-family: '方正小标宋简体', sans-serif;"><a href="求助方法.html">求助方法</a></li>
-        <li style="font-family: '方正小标宋简体', sans-serif;"><a href="发现.html">发现</a></li>
-        <li style="font-family: '方正小标宋简体', sans-serif;"><a href="论坛.html">论坛</a></li>
-        <li style="font-family: '方正小标宋简体', sans-serif;"><a href="我的空间.html">我的空间</a></li>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="干预模式.html">干预模式</a></li>
+        <li><a href="如何预防.html">如何预防</a></li>
+        <li><a href="求助方法.html">求助方法</a></li>
+        <li><a href="发现.html">发现</a></li>
+        <li><a href="论坛.html">论坛</a></li>
+        <li><a href="我的空间.html">我的空间</a></li>
       </ul>
     </nav>
   </header>
